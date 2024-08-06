@@ -1,0 +1,43 @@
+#Deployemnt
+
+git clone https://github.com/apache/openwhisk-deploy-kube.git
+
+cd openwhisk-deploy-kube
+
+
+helm repo add openwhisk https://openwhisk.apache.org/charts
+helm repo update
+helm install owdev openwhisk/openwhisk -n openwhisk --create-namespace -f /deploy/docker-windows/mycluster.yaml
+
+#Configuration
+
+wsk property set --apihost http://127.0.0.1:63098
+kubectl port-forward -n openwhisk svc/owdev-controller 63098:8080
+
+wsk property set --auth-key XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+
+#Test_simple_function
+    #My_Action (ac1.js) :
+    "   
+                    function main(){
+
+                    return {
+                        result : "Karim"
+                    };
+                }
+    "
+
+#Command to create an action
+
+wsk action create name_of_action FILE_of_action
+
+    example :
+        wsk action create ac1 ac1.js
+
+wsk action invoke ac1 --result 
+    {
+        "result": "Karim"
+    }
+    
+
+
