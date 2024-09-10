@@ -67,7 +67,7 @@ Create a simple JavaScript file, ac1.js, with the following content:
     function main(){
 
         return {
-            result : "FeverTokens"
+            result : "Hello , MUGUWARA1"
         };
     }
     
@@ -87,7 +87,7 @@ Expected output:
 
 ```
 {
-    "result": "FeverTokens"
+    "result": "Hello , MUGUWARA1"
 }
 
 ```
