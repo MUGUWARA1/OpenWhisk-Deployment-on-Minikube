@@ -1,6 +1,6 @@
 function main(){
 
     return {
-        result : "Karim"
+        result : "hello , MUGUWARA1"
     };
 }
