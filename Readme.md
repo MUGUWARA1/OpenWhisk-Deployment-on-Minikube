@@ -46,7 +46,7 @@ kubectl port-forward -n openwhisk svc/owdev-controller 63098:8080
 ```
 Set the authentication key for wsk:
 ```
-wsk property set --auth-key XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+wsk property set --auth XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 ```
 
 Replace XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX with your actual authentication key.
