@@ -31,7 +31,7 @@ helm repo update
 
 Deploy OpenWhisk using Helm with a custom configuration file:
 ```
-helm install owdev openwhisk/openwhisk -n openwhisk --create-namespace -f /deploy/docker-windows/mycluster.yaml
+helm install owdev openwhisk/openwhisk -n openwhisk --create-namespace -f deploy/docker-windows/mycluster.yaml
 ```
 ### Step 4: Configure wsk CLI
 
